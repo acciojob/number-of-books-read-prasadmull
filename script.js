@@ -16,16 +16,17 @@ const library = [
   },
 ];
 
-const numberOfBooksRead =library.filter((count) => {
+const numberOfBooksRead =() => {
   // write your code here
-	let c=0;
-	let read=count.readingStatus===true
-	for(let key in read){
-		c++;
+	let count=0;
+	for(let book of library){
+		if(book.readingStatus==true){
+			count++;
+		}
 	}
-	return c;
-});
+	return count;
+};
 
 // Do not change the code below
 
-alert(numberOfBooksRead());
+aler(numberOfBooksRead());
